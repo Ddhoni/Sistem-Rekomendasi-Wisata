@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistem Rekomendasi Rute Perjalanan Wisata Danau Toba</title>
+    <link rel="stylesheet" href="assets/styles/style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <span class="nav-title">Sistem Rekomendasi Wisata Danau Toba</span>
+        <a href="#" id="navHome">Home</a>
+        <a href="#" id="navAbout">About</a>
+      </div>
+    </nav>
+    <div id="homeContent" class="content">
+      <button id="themeSwitch" class="theme-switch">Ganti Tema</button>
+      <div class="container">
+        <div class="input-group">
+          <label for="location">Lokasi Wisata:</label>
+          <select id="location" name="location">
+            <!-- JavaScript akan mengisi opsi ini -->
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="money">Uang (Rp):</label>
+          <input type="number" id="money" name="money" min="1000" step="1000" />
+          <span id="moneyFormat">Rp 0</span>
+        </div>
+        <div class="slider-group">
+          <label for="weightMoney">Bobot Uang:</label>
+          <input
+            type="range"
+            id="weightMoney"
+            name="weightMoney"
+            min="0"
+            max="1"
+            step="0.01"
+            value="0.33"
+          />
+          <span id="moneyValue">0.33</span>
+        </div>
+        <div class="slider-group">
+          <label for="weightTime">Bobot Waktu:</label>
+          <input
+            type="range"
+            id="weightTime"
+            name="weightTime"
+            min="0"
+            max="1"
+            step="0.01"
+            value="0.33"
+          />
+          <span id="timeValue">0.33</span>
+        </div>
+        <div class="slider-group">
+          <label for="weightRating">Bobot Rating:</label>
+          <input
+            type="range"
+            id="weightRating"
+            name="weightRating"
+            min="0"
+            max="1"
+            step="0.01"
+            value="0.33"
+          />
+          <span id="ratingValue">0.34</span>
+        </div>
+        <div id="buttonContainer">
+          <button id="generateRoute">Generate Route</button>
+        </div>
+      </div>
+    </div>
+    <div id="aboutContent" class="content" style="display: none">
+      <h2>About</h2>
+      <p>
+        Sistem rekomendasi ini dibuat oleh [Nama Anda]. Didesain untuk
+        memudahkan pengguna dalam merencanakan perjalanan wisata ke Danau Toba
+        dengan menyediakan rekomendasi rute berbasis bobot preferensi pengguna.
+      </p>
+    </div>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
